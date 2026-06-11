@@ -1,14 +1,10 @@
-type GreetingProps = {
-  name: string;
-  age: number;
+import ProductCard from "./components/ProductCard";
+const mockProduct = {
+  id: 1,
+  title: "Wireless Mouse",
+  price: 29.99,
+  image: "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg",
 };
-function Greeting({ name, age }: GreetingProps) {
-  return (
-    <p>
-      Hello, {name}. You are {age} years old.
-    </p>
-  );
-}
 export default function App() {
-  return <Greeting name="Sara" age={25} />;
+  return <ProductCard product={mockProduct} />;
 }
